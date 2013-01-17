@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+	<!--  ListRow Left sied Thumbnail image -->
+	<LinearLayout android:id="@+id/thumbnail" 
+		android:layout_width="wrap_content"
+		android:layout_height="80dp"
+		android:padding="3dip"		
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/image_bg" 
+	    android:layout_marginRight="5dip">
+        
+		<ImageView
+		    android:id="@+id/list_image"
+		    android:layout_width="75dp"
+		    android:layout_height="75dp" />
+        
+	</LinearLayout>
+    
+	<!-- Title Of Song-->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Reciter Name"
+        android:textColor="#53a0d8"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+	<!-- Artist Name -->
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="1dip"
+        android:layout_toLeftOf="@+id/ImageView01"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Suras Name ..."
+        android:textColor="#343434"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="30dp"
+        android:layout_height="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/radio" />
+
+</RelativeLayout>
