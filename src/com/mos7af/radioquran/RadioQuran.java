@@ -80,6 +80,8 @@ public class RadioQuran extends TabActivity
     }
     public void loadMediaPlayer(int songIndex)
     {
+    	PlayerActivity.defaultPosition = songIndex;
+    	
     	PlayerActivity activity =(PlayerActivity) getLocalActivityManager().getActivity("player"); 
     	if(activity!=null)
     		activity.LoadNewSong(songIndex);

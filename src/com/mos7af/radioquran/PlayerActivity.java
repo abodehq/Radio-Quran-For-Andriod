@@ -49,6 +49,7 @@ public class PlayerActivity extends Activity implements OnCompletionListener, Se
 	
 	private boolean isActive = true;
 	private ImageLoader imageLoader;
+	public static int  defaultPosition = 0;
 	 private void CreateMediaPlayer()
 	 {
 			// Mediaplayer
@@ -102,7 +103,7 @@ public class PlayerActivity extends Activity implements OnCompletionListener, Se
 		
 		songManager = ChannelslistManager.getInstance();
 		utils = new Utilities();
-		
+		currentSongIndex = defaultPosition;
 		// Listeners
 		//songProgressBar.setOnSeekBarChangeListener(this); // Important
 		songProgressBar.setClickable(false);
@@ -113,7 +114,8 @@ public class PlayerActivity extends Activity implements OnCompletionListener, Se
 		songsList = songManager.getPlayList();
 		
 		// By default play first song
-		playSong(0);
+		
+			playSong(defaultPosition);
 				
 		/**
 		 * Play button click event
@@ -385,8 +387,8 @@ public class PlayerActivity extends Activity implements OnCompletionListener, Se
 				currentSongIndex = currentSongIndex + 1;
 			}else{
 				// play first song
-				playSong(0);
-				currentSongIndex = 0;
+				playSong(defaultPosition);
+				currentSongIndex = defaultPosition;
 			}
 		}
 	}

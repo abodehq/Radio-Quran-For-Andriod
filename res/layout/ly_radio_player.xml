@@ -162,7 +162,7 @@
         android:layout_alignParentRight="true"
         android:layout_weight="1"
         android:gravity="center|bottom"
-        android:text="df"
+        android:text="0:0"
         android:textColor="#eeeeee"
         android:textStyle="bold" />
 
